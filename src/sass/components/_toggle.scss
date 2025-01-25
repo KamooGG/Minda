@@ -1,0 +1,55 @@
+/* Contenedor del toggle */
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Asegura que flote sobre otros elementos */
+  }
+  
+  /* Estilo del toggle */
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Ocultar el input */
+  .toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider con imágenes circulares */
+  .toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/toggle/usa.png'); /* Imagen inicial */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: background-image 0.3s, transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cambia la imagen al activar el toggle */
+  .toggle-input:checked + .toggle-slider {
+    background-image: url('../images/toggle/spain.png'); /* Imagen activa */
+    transform: rotate(360deg); /* Animación de giro opcional */
+  }
+  
+  /* Animación de desvanecimiento */
+.animated-text {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .animated-text.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+  }
