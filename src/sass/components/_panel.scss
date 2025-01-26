@@ -85,7 +85,7 @@
 			@include vendor('justify-content', 'center');
 			@include vendor('align-items', 'flex-start');
 			@include vendor('flex-direction', 'column');
-			width: 22rem;
+			width: 27rem;
 
 			&.joined {
 				width: (22rem - $pad);
