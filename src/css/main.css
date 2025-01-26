@@ -122,7 +122,7 @@ body:before {
   width: 4rem;
   height: 4rem;
   margin: -2rem 0 0 -2rem;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='96px' height='96px' viewBox='0 0 96 96' zoomAndPan='disable'%3E%3Cstyle%3Ecircle %7Bfill: transparent%3B stroke: rgb(238, 238, 238)%3B stroke-width: 1.5px%3B %7D%3C/style%3E%3Cdefs%3E%3CclipPath id='corner'%3E%3Cpolygon points='0,0 48,0 48,48 96,48 96,96 0,96' /%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23corner)'%3E%3Ccircle cx='48' cy='48' r='32'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='96px' height='96px' viewBox='0 0 96 96' zoomAndPan='disable'%3E%3Cstyle%3Ecircle %7Bfill: transparent%3B stroke: %23201E43%3B stroke-width: 1.5px%3B %7D%3C/style%3E%3Cdefs%3E%3CclipPath id='corner'%3E%3Cpolygon points='0,0 48,0 48,48 96,48 96,96 0,96' /%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23corner)'%3E%3Ccircle cx='48' cy='48' r='32'/%3E%3C/g%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 4rem;
@@ -500,7 +500,7 @@ textarea:focus {
 
 option {
   background-color: rgba(255, 255, 255, 0.875);
-  color: rgb(238, 238, 238);
+  color: #201E43;
 }
 
 select {
@@ -514,7 +514,7 @@ select {
 }
 select option {
   color: rgba(255, 255, 255, 0.875);
-  background: rgb(238, 238, 238);
+  background: #201E43;
 }
 select:focus::-ms-value {
   background-color: transparent;
@@ -586,7 +586,7 @@ input[type=radio] + label:before {
   background: rgba(255, 255, 255, 0.075);
   border: solid 1px rgba(255, 255, 255, 0.25);
   border-radius: 0.25rem;
-  color: rgb(238, 238, 238);
+  color: #201E43;
   text-align: center;
 }
 body.is-ie input[type=checkbox] + label:before,
@@ -1109,7 +1109,7 @@ ul.contact-icons > li:before {
   line-height: 2.25rem;
   border-radius: 2.25rem;
   background-color: white;
-  color: rgb(238, 238, 238);
+  color: #201E43;
   cursor: default;
   font-size: 1.125rem;
   margin-right: 1rem;
@@ -1329,7 +1329,7 @@ button.primary,
 .button.primary {
   background-color: white;
   box-shadow: none;
-  color: rgb(238, 238, 238) !important;
+  color: #201E43 !important;
 }
 input[type=submit].primary.color1,
 input[type=reset].primary.color1,
@@ -1457,7 +1457,7 @@ button:disabled,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(238, 238, 238, 0.875);
+  background-color: rgba(32, 30, 67, 0.875);
   opacity: 0;
   outline: 0;
   visibility: none;
@@ -2703,7 +2703,7 @@ button:disabled,
   border-radius: 50%;
   transition: background-image 0.3s, transform 0.3s;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Cambia la imagen al activar el toggle */
@@ -2721,6 +2721,11 @@ button:disabled,
 .animated-text.hidden {
   opacity: 0;
   transform: translateY(10px);
+}
+
+.textarea-dimensions {
+  max-width: 960px;
+  max-height: 200px;
 }
 
 /* Page Wrapper */
@@ -2782,7 +2787,6 @@ button:disabled,
   cursor: default;
   position: relative;
   height: 32rem;
-  box-shadow: 0 2rem 4rem 0.25rem rgba(238, 238, 238, 0.575);
 }
 #wrapper > .scrollZone {
   position: fixed;
@@ -2803,7 +2807,7 @@ button:disabled,
   bottom: -3rem;
   right: 0;
   font-size: 0.8rem;
-  color: rgba(238, 238, 238, 0.375);
+  color: rgba(32, 30, 67, 0.375);
   margin-bottom: 0;
 }
 #wrapper > .copyright a:hover {
@@ -2839,7 +2843,7 @@ body.is-preload #wrapper {
     flex-direction: column;
     height: auto;
     margin: 0 0 5rem 0;
-    box-shadow: 0 0.25rem 1.5rem 0.25rem rgba(238, 238, 238, 0.5);
+    box-shadow: 0 0.25rem 1.5rem 0.25rem rgba(32, 30, 67, 0.5);
   }
   #wrapper > .scrollZone {
     display: none;

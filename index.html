@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-	Ethereal by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html lang="en">
     <head>
         <title>Minda Consulting</title>
@@ -259,23 +254,94 @@
                         </p>
                     </div>
                     <div class="inner columns divided">
-                        <div class="span-3-25">
-                            <form method="post" action="#">
+                        <div class="span-5">
+                            <form method="post" action="./src/php/sendmail.php">
                                 <div class="fields">
-                                    <div class="field half">
+                                    <div class="field third">
                                         <label for="name" class="animated-text">Name</label>
                                         <input
                                             type="text"
                                             name="name"
                                             id="name"
+                                            required
                                         />
                                     </div>
-                                    <div class="field half">
+                                    <div class="field third">
                                         <label for="email" class="animated-text">Email</label>
                                         <input
                                             type="email"
                                             name="email"
                                             id="email"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="field third">
+                                        <label for="country-select">Seleccione un país:</label>
+                                        <select id="country-select" required>
+                                            <!-- Las opciones se generan dinámicamente -->
+                                        </select>
+                                    </div>
+                                    <div class="field third">
+                                        <label for="demo-category"
+                                            >Category</label
+                                        >
+                                        <div class="select-wrapper">
+                                            <select
+                                                name="demo-category"
+                                                id="demo-category"
+                                                required
+                                            >
+                                                <option value="">-</option>
+                                                
+                                                <option value=" ">
+                                                    Mission or Vision problems
+                                                </option>
+                                                <option value="">
+                                                    Opportunities and Threats problems
+                                                </option>
+                                                <option value="">
+                                                    Competence Problems
+                                                </option>
+                                                <option value="">
+                                                    Operational Problems
+                                                </option>
+                                                <option value="">
+                                                    Work Assignment Problems
+                                                </option>
+                                                <option value="">
+                                                    Evaluation Problems
+                                                </option>
+                                                <option value="">
+                                                    Option Ideation Problems
+                                                </option>
+                                                <option value="">
+                                                    Project Recovery
+                                                </option>
+                                                <option value="">
+                                                    Quality Problems
+                                                </option>
+                                                <option value="">
+                                                    Other
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="field third">
+                                        <label for="name" class="animated-text">Company Name</label>
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="companyName"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="field third">
+                                        <label for="name" class="animated-text">Company Website</label>
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            id="companyWebsite"
+                                            required
                                         />
                                     </div>
                                     <div class="field">
@@ -283,7 +349,10 @@
                                         <textarea
                                             name="message"
                                             id="message"
-                                            rows="4"
+                                            rows="2"
+                                            required
+                                            maxrows="3"
+                                            class="textarea-dimensions"
                                         ></textarea>
                                     </div>
                                 </div>
@@ -333,5 +402,6 @@
         <script src="src/js/breakpoints.min.js"></script>
         <script src="src/js/main.js"></script>
         <script src="src/js/language.js"></script>
+        <script src="src/js/country.js"></script>
     </body>
 </html>
