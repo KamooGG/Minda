@@ -203,7 +203,7 @@
                                     </div>
                                     <div class="field third">
                                         <label for="country-select">Seleccione un país:</label>
-                                        <select id="country-select" required>
+                                        <select name="country" id="country-select" required>
                                             <!-- Las opciones se generan dinámicamente -->
                                         </select>
                                     </div>
@@ -219,34 +219,34 @@
                                             >
                                                 <option value="">-</option>
                                                 
-                                                <option value=" ">
+                                                <option value="Mission or Vision problems">
                                                     Mission or Vision problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Opportunities and Threats problems">
                                                     Opportunities and Threats problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Competence Problems">
                                                     Competence Problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Operational Problems">
                                                     Operational Problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Work Assignment Problems">
                                                     Work Assignment Problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Evaluation Problems">
                                                     Evaluation Problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Option Ideation Problems">
                                                     Option Ideation Problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Project Recovery">
                                                     Project Recovery
                                                 </option>
-                                                <option value="">
+                                                <option value="Quality Problems">
                                                     Quality Problems
                                                 </option>
-                                                <option value="">
+                                                <option value="Other">
                                                     Other
                                                 </option>
                                             </select>
@@ -256,7 +256,7 @@
                                         <label for="name" class="animated-text">Company Name</label>
                                         <input
                                             type="text"
-                                            name="name"
+                                            name="companyName"
                                             id="companyName"
                                             required
                                         />
@@ -265,7 +265,7 @@
                                         <label for="name" class="animated-text">Company Website</label>
                                         <input
                                             type="text"
-                                            name="name"
+                                            name="companyWebsite"
                                             id="companyWebsite"
                                             required
                                         />
@@ -318,7 +318,7 @@
             const data = Object.fromEntries(formData.entries());
         
             try {
-                const response = await fetch("http://localhost:3000/send-email", {
+                const response = await fetch("http://mindaconsulting.com/api/send-email", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),
@@ -332,7 +332,7 @@
                 }
             } catch (error) {
                 console.error("Error:", error);
-                alert("Hubo un error al enviar el mensaje. FRONT CATCH");
+                alert("Hubo un error al enviar el mensaje. FRONT CATCH:", error);
             }
         });
         </script>
