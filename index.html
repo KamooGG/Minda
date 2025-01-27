@@ -181,7 +181,7 @@
                     </div>
                     <div class="inner columns divided">
                         <div class="span-5">
-                            <form method="post" action="assets/sendmail.php">
+                            <form method="post" id="contact-form">
                                 <div class="fields">
                                     <div class="field third">
                                         <label for="name" class="animated-text">Name</label>
@@ -208,13 +208,13 @@
                                         </select>
                                     </div>
                                     <div class="field third">
-                                        <label for="demo-category"
+                                        <label for="category"
                                             >Category</label
                                         >
                                         <div class="select-wrapper">
                                             <select
-                                                name="demo-category"
-                                                id="demo-category"
+                                                name="category"
+                                                id="category"
                                                 required
                                             >
                                                 <option value="">-</option>
@@ -293,25 +293,6 @@
                                 </ul>
                             </form>
                         </div>
-                        <div class="span-1-5">
-                            <ul class="contact-icons color1">
-                                <li class="icon brands fa-twitter">
-                                    <a href="#">@untitled-tld</a>
-                                </li>
-                                <li class="icon brands fa-facebook-f">
-                                    <a href="#">facebook.com/untitled</a>
-                                </li>
-                                <li class="icon brands fa-snapchat-ghost">
-                                    <a href="#">@untitled-tld</a>
-                                </li>
-                                <li class="icon brands fa-instagram">
-                                    <a href="#">@untitled-tld</a>
-                                </li>
-                                <li class="icon brands fa-medium-m">
-                                    <a href="#">medium.com/untitled</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </section>
 
@@ -323,11 +304,37 @@
         </div>
 
         <!-- Scripts -->
-        <script src="src/js/jquery.min.js" type="module"></script>
-        <script src="src/js/browser.min.js" type="module"></script>
-        <script src="src/js/breakpoints.min.js" type="module"></script>
+        <script src="jquery.min.js"></script>
+        <script src="browser.min.js"></script>
+        <script src="breakpoints.min.js"></script>
         <script src="src/js/main.js" type="module"></script>
         <script src="src/js/language.js" type="module"></script>
         <script src="src/js/country.js" type="module"></script>
+        <script>
+        document.getElementById("contact-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+        
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+        
+            try {
+                const response = await fetch("http://localhost:3000/send-email", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                });
+        
+                if (response.ok) {
+                    alert("Mensaje enviado con éxito.");
+                    e.target.reset();
+                } else {
+                    alert("Hubo un error al enviar el mensaje. FRONT ELSE");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el mensaje. FRONT CATCH");
+            }
+        });
+        </script>
     </body>
 </html>

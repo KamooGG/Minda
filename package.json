@@ -10,5 +10,22 @@
   },
   "devDependencies": {
     "vite": "^6.0.5"
-  }
+  },
+  "description": "Minda Consulting",
+  "main": "breakpoints.min.js",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "esbuild": "^0.24.2",
+    "express": "^4.21.2",
+    "nanoid": "^3.3.8",
+    "nodemailer": "^6.10.0",
+    "picocolors": "^1.1.1",
+    "postcss": "^8.5.1",
+    "rollup": "^4.32.0",
+    "source-map-js": "^1.2.1"
+  },
+  "keywords": [],
+  "author": "Cristian Blanco ccamiloblanco@gmail.com",
+  "license": "ISC"
 }

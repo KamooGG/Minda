@@ -2807,7 +2807,7 @@ button:disabled,
   bottom: -3rem;
   right: 0;
   font-size: 0.8rem;
-  color: rgba(32, 30, 67, 0.375);
+  color: #201e43;
   margin-bottom: 0;
 }
 #wrapper > .copyright a:hover {
